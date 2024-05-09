@@ -1,0 +1,93 @@
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 50rem), 1fr));
+}
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-position: center;
+}
+
+.nom {
+  font-size: 50px;
+  color: white;
+  margin-left: 50px;
+}
+
+.items {
+  position: relative;
+  z-index: 2;
+  background-color: black;
+
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+  font-family: "Bebas Neue", sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.text {
+  width: 100%;
+  font-size: 120%;
+  color: white;
+  margin: 20px 70px 20px 20px;
+}
+
+.info {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card>img,
+.card>.info {
+  transition: 200ms ease-in-out;
+}
+
+.card>.info {
+  opacity: 0;
+}
+
+.card:hover>.info {
+  opacity: 1;
+}
+
+.pagprincipal {
+  position: absolute;
+  width: 100px;
+  right: 47%;
+  height: auto;
+  z-index: 3;
+}

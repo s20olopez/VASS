@@ -1,0 +1,58 @@
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  background-color: black;
+}
+
+.items {
+  position: relative;
+  z-index: 2;
+  background-color: black;
+
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+  font-family: "Bebas Neue", sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 30px;
+  color: white;
+  margin: 20px 70px 20px 20px;
+  font-family: "Bebas Neue", sans-serif;
+  width: 850px;
+
+}
+
+#mapa {
+  margin-top: 80px;
+}
+
+.pagprincipal {
+  position: absolute;
+  width: 100px;
+  right: 47%;
+  height: auto;
+  z-index: 3;
+}
