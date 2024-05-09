@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASS</title>
+    <link rel="stylesheet" href="css/style-contacte.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="inicio">
+        <div class="items">
+            <a class="pagprincipal" href="pagprincipal.html"><img src="media/logo-VASS.svg" alt="logo"></a>
+            <div class="items">
+                <div class="nav1">
+                    <a href="artistes.html">
+                        <h1>ARTISTES</h1>
+                    </a>
+                    <a href="comarribar.html">
+                        <h1>COM ARRIBAR</h1>
+                    </a>
+                    <a href="contacte.html">
+                        <h1>CONTACTE</h1>
+                    </a>
+
+                    <h1>ENTRADES</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="contactForm" action="#">
+
+            <h2>CONTACTA AMB NOSALTRES</h2>
+
+            <label for="nom">Nom<br></label>
+            <label for="cognom">Cognom</label>
+
+            <input class="nom" type="text" name="nom" required>
+
+           <input class="nom" type="text" name="cognom" required>
+
+            <label for="email">Correu</label>
+            <input type="email" name="email" required>
+
+            <label for="telefon">Número de contacte</label>
+            <input type="text" name="telefon" required>
+
+            <label for="assumpte">Assumpte</label>
+            <input type="text" name="assumpte" required>
+
+            <label for="missatge">Missatge</label>
+            <textarea name="missatge" required></textarea>
+
+            <input type="submit" name="enviar" value="Enviar missatge" class="btn-enviar">
+
+        </form>
+
+        
+
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+            // Validar que todos los campos estén llenos
+            var isValid = true; // Variable para rastrear si el formulario es válido
+            var inputs = this.querySelectorAll('input, textarea'); // Obtener todos los campos de entrada y áreas de texto dentro del formulario
+
+            // Iterar sobre cada campo de entrada y área de texto
+            for (var i = 0; i < inputs.length; i++) {
+                // Verificar si el valor del campo está vacío o solo contiene espacios en blanco
+                if (!inputs[i].value.trim()) {
+                    isValid = false; // Establecer isValid en falso si se encuentra un campo vacío
+                    break; // Salir del bucle si se encuentra un campo vacío
+                }
+            }
+
+            // Si todos los campos están llenos, mostrar mensaje de agradecimiento y limpiar el formulario
+            if (isValid) {
+                document.getElementById('agradecimiento') // Mostrar mensaje de agradecimiento
+                document.getElementById('contactForm').style.display = 'none'
+                this.reset(); // Limpiar el formulario
+            } else {
+                // Si hay campos vacíos, mostrar alerta
+                alert('Por favor, llene todos los campos.');
+            }
+        });
+
+        <div id="agradecimiento">
+            <p>¡Gracias por contactar con nosotros!</p>
+        </div>
+    </script>
+
+</body>
+
+</html>
